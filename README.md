@@ -50,7 +50,7 @@ Created topic ps-topic.
 ### Producer
 Now, we will be entering the producer console.
 
-If you have exited the bash terminal within the Kafka container, please refer to [Pub/Sub](#Pub/Sub) to execute the command again.
+If you have exited the bash terminal within the Kafka container, please refer to [Pub/Sub](#Pub/Sub) section on how to connect to the Kafka's container bash terminal.
 
 To enter the producer console, we can execute
 ```bash
@@ -60,7 +60,7 @@ kafka-console-producer --topic ps-topic --bootstrap-server kafka-1:9092
 ### Consumer
 Now, we will be entering the consumer console. For demonstration purpose, please open a separate command prompt/terminal for the following instructions this while maintaining the producer console as connected.
 
-Please refer to [Pub/Sub](#Pub/Sub) to connect to Kafka's container bash.
+Please refer to [Pub/Sub](#Pub/Sub) section on how to connect to the Kafka's container bash terminal.
 
 To enter the producer console, we can execute
 ```bash
@@ -76,7 +76,7 @@ Please ensure you have both [Producer](#Producer) and [Consumer](#Consumer) cons
 
 ## Successful management of the failure of the master node in the cluster
 
-If you are continuing from the previous section, you may stop either one of the producer or consumer console by pressing `Ctrl + C`, otherwise open a new terminal and follow the instructions [here](#Pub/Sub).
+If you are continuing from the previous section, you may stop either one of the producer or consumer console by pressing `Ctrl + C`, otherwise open a new command prompt/terminal window and follow the instructions [here](#Pub/Sub).
 
 Commands to be executed are in the Kafka's container bash terminal otherwise stated.
 
@@ -87,7 +87,8 @@ kafka-topics --zookeeper zookeeper-1:2181 --describe --topic ps-topic
 
 ![Before](images/SS-Before.png)
 
-As we can see here, node 1 is the master (or leader) for partition 0, node 2 for partition 1 and node 3 for partition 2. 
+On my machine, node 1 is the master (or leader) for partition 0, node 2 for partition 1 and node 3 for partition 2. 
+* The master/leader node can vary from machine to machine.
 
 To demonstrate the "failure" event, we will be killing one of the Kafka's node. You may kill any nodes of your choice. For this demonstration, we will be killing node 2, named `cs3219-otot-task-d_kafka-2_1`.
 
