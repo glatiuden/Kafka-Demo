@@ -1,7 +1,5 @@
-# CS3219 Task D: Pub-Sub Messaging
-**Name**: Koh Vinleon <br/>
-**Matric Number**: A0202155W <br/>
-**GitHub Link**: [https://github.com/glatiuden/CS3219-OTOT-TaskD](https://github.com/glatiuden/CS3219-OTOT-TaskD)
+# Kafka Demo
+Trying out Pub-Sub Messaging using Kafka
 
 ## Set Up Instructions
 All the configuration has been set in `docker-compose.yml` in the same directory.
